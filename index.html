@@ -10,7 +10,9 @@
 
   <!-- SEO用のメタタグ -->
   <meta name="description" content="Shinmeeのポートフォリオサイト。どんなことをするのか、仕事内容や仕事に対する思いを紹介しています。">
-  <meta name="keywords" content="Shinmee, ポートフォリオ, 萬屋, 万屋,杉山">
+  <meta name="keywords" content="Shinmee, ポートフォリオ, 萬屋, 便利屋, 静岡">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hulham1111-lang.github.io/site_design/">
 
   <!-- レスポンシブデザインのための設定 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +23,16 @@
 
   <!-- ソーシャルメディアでのシェア時の表示を制御 -->
   <meta property="og:title" content="Shinmee - 萬屋">
-  <meta property="og:description" content="Shinmeeについてのご紹介">
+  <meta property="og:description" content="Shinmeeの仕事内容や仕事に対する想いをご紹介します。">
   <meta property="og:type" content="website"><!-- コンテンツの種類（website, article, product など）-->
-  <meta property="og:url" content=""><!-- ページのURL -->
-  <meta property="og:image" content=""><!-- シェア時に表示される画像 -->
+  <meta property="og:url" content="https://hulham1111-lang.github.io/site_design/"><!-- ページのURL -->
+  <meta property="og:image" content="https://hulham1111-lang.github.io/site_design/image/logo.png"><!-- シェア時に表示される画像 -->
+  <meta property="og:site_name" content="Shinmee">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shinmee - 萬屋">
+  <meta name="twitter:description" content="Shinmeeの仕事内容や仕事に対する想いをご紹介します。">
+  <meta name="twitter:image" content="https://hulham1111-lang.github.io/site_design/image/logo.png">
 
   <!-- ファビコン - ページタイトルの左側に表示される小さなアイコン -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -77,8 +85,8 @@
           <div class="hero__description">
             新芽のような「新しいこと」を<br>
             親身になって「寄り添えること」を<br>
-            関わるすべての人に、笑っていてほしい<br>
-            そういった想いをこめて「ShinMee」と名付けました。
+            関わるすべての人に笑っていてほしい<br>
+            想いをこめて「ShinMee」と名付けました。
           </div>
           <a class="hero__scroll-indicator" href="#about" aria-label="Aboutセクションへ移動">
             <img class="hero__scroll-icon" src="./image/arrow.png" alt="スクロール矢印">
@@ -86,7 +94,7 @@
           </a>
         </div>
         <div class="hero__person">
-          <img class="hero__person-image" src="./image/person.png" alt="代表者の写真">
+          <img class="hero__person-image" src="./image/person01.jpg" alt="代表者の写真">
         </div>
         <div class="hero__background"></div>
       </div>
@@ -101,17 +109,17 @@
             皆様のお力に。
           </h2>
           <p class="about__description section-description">
-            私は仕事が好きです。なぜなら、人のお役に立てるからです。<br>
+            私は仕事が好きです。なぜなら、人のお役に立てるからです。<br class="br-pc"><br class="br-sp"><br class="br-sp">
             だからこそ、会社という枠組みでなくもっと広い、
             よりたくさんの人の助けになりたいと考え、
-            40代経営者として新たなスタートを切りました。
+            40代経営者として新たなスタートを切りました。<br class="br-sp"><br class="br-sp">
             今までお世話になった方も、これから関わるであろう方も。
             等しくお力になれたらと、そう思っております。
           </p>
         </div>
         <div class="about__person">
           <div class="about__image-wrapper">
-            <img src="./image/person02.png" alt="代表者の写真" class="about__image">
+            <img src="./image/person02.jpg" alt="代表者の写真" class="about__image">
             <div class="about__watermark" aria-hidden="true">ABOUT</div>
           </div>
           <div class="about__background"></div>
@@ -129,14 +137,14 @@
           </h2>
           <p class="works__description section-description">
             事業内容は多岐にわたります。いわゆる「萬屋」がイメージに近いです。<br>
-            サイトを作るにあたって事業の区分は決めましたが、正直、単なる飾りでしかありません。
-            「人の役に立ちたい」と考えると一つに絞ることができず、結果として、たくさんのことに手を出してしまうのです。
+            サイトを作るにあたって事業の区分は決めましたが、正直、単なる飾りでしかありません。<br>
+            「人の役に立ちたい」と考えると一つに絞ることができず、結果、たくさんのことに手を出してしまうのです。
           </p>
         </div>
         <div class="works__slider-container">
           <div class="works__slider">
             <div class="works__item">
-              <img src="./image/01.png" alt="仕事内容01" class="works__item-image">
+              <img src="./image/01.jpg" alt="仕事内容01" class="works__item-image">
               <h3 class="works__item-title">イベント企画・運営</h3>
               <p class="works__item-description">
                 お客様のニーズに合わせたイベントの企画から運営まで、
@@ -144,7 +152,7 @@
               </p>
             </div>
             <div class="works__item">
-              <img src="./image/02.png" alt="仕事内容02" class="works__item-image">
+              <img src="./image/02.jpg" alt="仕事内容02" class="works__item-image">
               <h3 class="works__item-title">引越し・移転作業</h3>
               <p class="works__item-description">
                 迅速かつ丁寧な作業を行い、
@@ -152,7 +160,7 @@
               </p>
             </div>
             <div class="works__item">
-              <img src="./image/03.png" alt="仕事内容03" class="works__item-image">
+              <img src="./image/03.jpg" alt="仕事内容03" class="works__item-image">
               <h3 class="works__item-title">家事代行</h3>
               <p class="works__item-description">
                 プロのスタッフが家をいつでも清潔に保ちます。
@@ -160,43 +168,43 @@
               </p>
             </div>
             <div class="works__item">
-              <img src="./image/03.png" alt="仕事内容03" class="works__item-image">
-              <h3 class="works__item-title">家事代行</h3>
+              <img src="./image/04.jpg" alt="仕事内容04" class="works__item-image">
+              <h3 class="works__item-title">単発イベントスタッフ</h3>
               <p class="works__item-description">
-                プロのスタッフが家をいつでも清潔に保ちます。
-                あなたの大切な時間を、もっと有意義に使いましょう。
+                結婚式やキッチンカー、展示会など、
+                あらゆるイベントに柔軟に対応します。急な人手不足もお任せください。
               </p>
             </div>
              <div class="works__item">
-              <img src="./image/03.png" alt="仕事内容03" class="works__item-image">
-              <h3 class="works__item-title">家事代行</h3>
+              <img src="./image/05.jpg" alt="仕事内容05" class="works__item-image">
+              <h3 class="works__item-title">運搬・配送サポート</h3>
               <p class="works__item-description">
-                プロのスタッフが家をいつでも清潔に保ちます。
-                あなたの大切な時間を、もっと有意義に使いましょう。
+                重い荷物や大型家具の運搬から、
+                ちょっとした配送まで。力仕事は私たちにお声がけください。
               </p>
             </div>
              <div class="works__item">
-              <img src="./image/03.png" alt="仕事内容03" class="works__item-image">
-              <h3 class="works__item-title">家事代行</h3>
+              <img src="./image/06.jpg" alt="仕事内容06" class="works__item-image">
+              <h3 class="works__item-title">庭・屋外作業</h3>
               <p class="works__item-description">
-                プロのスタッフが家をいつでも清潔に保ちます。
-                あなたの大切な時間を、もっと有意義に使いましょう。
+                草刈りや庭のメンテナンス、
+                屋外の困りごとに対応します。きれいな環境づくりをサポートします。
               </p>
             </div>
              <div class="works__item">
-              <img src="./image/03.png" alt="仕事内容03" class="works__item-image">
-              <h3 class="works__item-title">家事代行</h3>
+              <img src="./image/07.jpg" alt="仕事内容07" class="works__item-image">
+              <h3 class="works__item-title">組立・設置作業</h3>
               <p class="works__item-description">
-                プロのスタッフが家をいつでも清潔に保ちます。
-                あなたの大切な時間を、もっと有意義に使いましょう。
+                家具の組み立てから看板設置まで、
+                手間のかかる作業を丁寧に行います。
               </p>
             </div>
              <div class="works__item">
-              <img src="./image/03.png" alt="仕事内容03" class="works__item-image">
-              <h3 class="works__item-title">家事代行</h3>
+              <img src="./image/08.jpg" alt="仕事内容08" class="works__item-image">
+              <h3 class="works__item-title">事務・受付サポート</h3>
               <p class="works__item-description">
-                プロのスタッフが家をいつでも清潔に保ちます。
-                あなたの大切な時間を、もっと有意義に使いましょう。
+                電話対応や受付業務、データ入力など、
+                事務作業の人手が必要なときにサポートします。
               </p>
             </div>
           </div>
@@ -218,9 +226,12 @@
         </div>
         <div class="contact__content">
           <p class="contact__description section-description">
-            何事も会話から始まるものです。だからこそ、一度お話ししましょう。<br>
-            「実態がわからないから怖い」なんて思う方もいらっしゃるはずです。でもこれだけは言えます。<br>
-            私は、あなたの力になりたい。それがどんなことであってもです。虫退治でも、お庭の草むしりでも。そういった小さなものでも構わないのです。<br>
+            何事も会話から始まるものです。<br class="br-sp">
+            だからこそ、一度お話ししましょう。<br class="br-pc"><br class="br-sp">
+            「実態がわからないから怖い」なんて思う方もいらっしゃるはずです。でもこれだけは言えます。<br class="br-pc"><br class="br-sp"><br class="br-sp">
+            私は、あなたの力になりたい。<br class="br-sp">
+            それがどんなことであってもです。<br class="br-sp">
+            虫退治でも、お庭の草むしりでも、そういった小さなものでも構わないのです。<br class="br-pc"><br class="br-sp"><br class="br-sp">
             あなたのご連絡、お待ちしております。
           </p>
           <a class="contact__mail-link" href="mailto:info@shinmee.co.jp">mail : info@shinmee.co.jp</a>
@@ -233,7 +244,7 @@
     <a class="footer__logo" href="./index.html">
       <img src="./image/logo.png" alt="Shinmeeロゴ" class="footer__logo-image">
     </a>
-    <p class="footer__address">静岡県 静岡市駿河区 大谷2丁目</p>
+    <p class="footer__address">静岡県</p>
     <p class="footer__copyright"><small>&copy;2025 Shinmee</small></p>
   </footer>
 </body>
