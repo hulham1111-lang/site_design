@@ -1012,6 +1012,23 @@ main {
     padding: 24px 0 24px 16px;
   }
 
+  .works__slider {
+    scrollbar-width: auto;
+    scrollbar-color: var(--primary-color) var(--background-color);
+  }
+
+  .works__slider::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .works__slider::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+  }
+
+  .works__slider::-webkit-scrollbar-track {
+    background: var(--background-color);
+  }
+
   .works__item {
     width: 260px;
     margin-right: 20px;
