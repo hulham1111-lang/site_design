@@ -129,6 +129,10 @@ main {
   margin-bottom: 30px;
 }
 
+.br-sp {
+  display: none;
+}
+
 /*=================================
   ヘッダー
 =================================*/
@@ -761,6 +765,14 @@ main {
 }
 
 @media (max-width: 768px) {
+  .br-pc {
+    display: none;
+  }
+
+  .br-sp {
+    display: inline;
+  }
+
   .container {
     margin: 0 auto;
     padding: 0 16px;
