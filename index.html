@@ -43,6 +43,10 @@
 <body>
   <header class="header">
     <div class="header__container container">
+      <input class="header__menu-toggle" type="checkbox" id="menu-toggle" aria-label="メニュー開閉">
+      <label class="header__menu-button" for="menu-toggle" aria-hidden="true">
+        <span class="header__menu-line"></span>
+      </label>
       <nav class="header__nav" aria-label="メインナビゲーション">
         <ul class="header__nav-list">
           <li class="header__nav-item">
@@ -59,43 +63,44 @@
           </li>
         </ul>
       </nav>
+      <label class="header__menu-backdrop" for="menu-toggle" aria-hidden="true"></label>
     </div>
   </header>
 
   <main class="main" id="home">
-    <section class="fv">
-      <div class="fv__container">
-        <div class="fv__content">
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
           <h1>
-            <img class="fv__logo" src="./image/logo.png" alt="Shinmeeロゴ">
+            <img class="hero__logo" src="./image/logo.png" alt="Shinmeeロゴ">
           </h1>
-          <div class="fv__description">
+          <div class="hero__description">
             新芽のような「新しいこと」を<br>
             親身になって「寄り添えること」を<br>
             関わるすべての人に、笑っていてほしい<br>
             そういった想いをこめて「ShinMee」と名付けました。
           </div>
-          <div class="fv__scroll-indicator">
-            <img class="fv__scroll-icon" src="./image/arrow.png" alt="スクロール矢印">
+          <div class="hero__scroll-indicator">
+            <img class="hero__scroll-icon" src="./image/arrow.png" alt="スクロール矢印">
             <span>scroll</span>
           </div>
         </div>
-        <div class="fv__person">
-          <img class="fv__person-image" src="./image/person.png" alt="代表者の写真">
+        <div class="hero__person">
+          <img class="hero__person-image" src="./image/person.png" alt="代表者の写真">
         </div>
-        <div class="fv__background-decoration"></div>
+        <div class="hero__background"></div>
       </div>
     </section>
 
     <section class="about" id="about">
-      <p class="section-heading section-heading--vertical" aria-hidden="true">About</p>
+      <p class="about__heading section-label section-label--vertical" aria-hidden="true">About</p>
       <div class="about__container">
         <div class="about__content">
           <h2 class="about__title section-title">
             サポートを通して、<br>
             皆様のお力に。
           </h2>
-          <p class="about__description description-text">
+          <p class="about__description section-description">
             私は仕事が好きです。なぜなら、人のお役に立てるからです。<br>
             だからこそ、会社という枠組みでなくもっと広い、
             よりたくさんの人の助けになりたいと考え、
@@ -107,29 +112,29 @@
         <div class="about__person">
           <div class="about__image-wrapper">
             <img src="./image/person02.png" alt="代表者の写真" class="about__image">
-            <div class="about__english-text" aria-hidden="true">ABOUT</div>
+            <div class="about__watermark" aria-hidden="true">ABOUT</div>
           </div>
-          <div class="about__background-element"></div>
+          <div class="about__background"></div>
         </div>
       </div>
     </section>
 
     <section class="works" id="works">
-      <p class="works__heading section-heading section-heading--horizontal" aria-hidden="true">Works</p>
+      <p class="works__heading section-label section-label--horizontal" aria-hidden="true">Works</p>
       <div class="works__container">
         <div class="works__content">
           <h2 class="works__title section-title">
             どんなことでも、<br>
             些細なことでも。
           </h2>
-          <p class="works__description description-text">
+          <p class="works__description section-description">
             事業内容は多岐にわたります。いわゆる「萬屋」がイメージに近いです。<br>
             サイトを作るにあたって事業の区分は決めましたが、正直、単なる飾りでしかありません。
             「人の役に立ちたい」と考えると一つに絞ることができず、結果として、たくさんのことに手を出してしまうのです。
           </p>
         </div>
-        <div class="works__selector-container">
-          <div class="works__selector">
+        <div class="works__slider-container">
+          <div class="works__slider">
             <div class="works__item">
               <img src="./image/01.png" alt="仕事内容01" class="works__item-image">
               <h3 class="works__item-title">イベント企画・運営</h3>
@@ -196,14 +201,14 @@
             </div>
           </div>
         </div>
-        <div class="works__background-element" aria-hidden="true">
-        <div class="works__treat">WORKS</div>
+        <div class="works__background" aria-hidden="true">
+        <div class="works__watermark">WORKS</div>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <p class="contact__heading section-heading section-heading--horizontal" aria-hidden="true">Contact</p>
+      <p class="contact__heading section-label section-label--horizontal" aria-hidden="true">Contact</p>
       <div class="contact__container">
         <div class="contact__lead">
           <h2 class="contact__title section-title">
@@ -212,12 +217,11 @@
           </h2>
         </div>
         <div class="contact__content">
-          <p class="contact__description description-text">
-            些細な悩みやお困りごとでも、だからこそ、一度お話ししましょう。<br>
-            「変化が大きくならないか」、「人に言うのが気が引ける」そのようにだけは考えず、<br>
-            まずは、あなたのために何か、どのように力になれるかについて、一度お話しできれば幸いです。<br>
-            思い切って、そういった小さなものでも構わないのです。<br>
-            あなたのご連絡、心待ちにしております。
+          <p class="contact__description section-description">
+            何事も会話から始まるものです。だからこそ、一度お話ししましょう。<br>
+            「実態がわからないから怖い」なんて思う方もいらっしゃるはずです。でもこれだけは言えます。<br>
+            私は、あなたの力になりたい。それがどんなことであってもです。虫退治でも、お庭の草むしりでも。そういった小さなものでも構わないのです。<br>
+            あなたのご連絡、お待ちしております。
           </p>
           <a class="contact__mail-link" href="mailto:info@shinmee.co.jp">mail : info@shinmee.co.jp</a>
         </div>
