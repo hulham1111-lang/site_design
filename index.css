@@ -1009,10 +1009,12 @@ main {
     width: 100%;
     max-width: 540px;
     margin: 28px auto 0;
-    padding: 24px 0 24px 16px;
+    padding: 24px 0 28px 16px;
   }
 
   .works__slider {
+    position: relative;
+    z-index: 70;
     scrollbar-width: auto;
     scrollbar-color: var(--primary-color) var(--background-color);
   }
@@ -1027,6 +1029,29 @@ main {
 
   .works__slider::-webkit-scrollbar-track {
     background: var(--background-color);
+  }
+
+  /* iOSでスクロールバーが見えない場合の視覚ガイド */
+  .works__slider-container::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 8px;
+    height: 2px;
+    background: var(--background-color);
+    z-index: 60;
+  }
+
+  .works__slider-container::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    bottom: 8px;
+    width: 96px;
+    height: 2px;
+    background: var(--primary-color);
+    z-index: 61;
   }
 
   .works__item {
