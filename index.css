@@ -590,6 +590,14 @@ main {
   outline: none;
 }
 
+/* カスタムスクロールバー: 基本非表示、モバイルのみ表示 */
+.works__scrollbar {
+  display: none;
+}
+.works__scrollbar-thumb {
+  display: none;
+}
+
 /*=================================
   Responsive
 =================================*/
@@ -1010,23 +1018,38 @@ main {
     max-width: 540px;
     margin: 28px auto 0;
     padding: 24px 0 28px 16px;
-  }
-
-  .works__slider {
-    scrollbar-width: auto;
-    scrollbar-color: auto;
-  }
-
-  .works__slider::-webkit-scrollbar {
     height: auto;
+    overflow: visible;
   }
 
-  .works__slider::-webkit-scrollbar-thumb {
-    background: initial;
+  /* ネイティブスクロールバーを非表示（2本目を消す） */
+  .works__slider {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .works__slider::-webkit-scrollbar {
+    display: none;
   }
 
-  .works__slider::-webkit-scrollbar-track {
-    background: initial;
+  /* カスタムスクロールバー（1本目）を常時表示 */
+  .works__scrollbar {
+    display: block !important;
+    position: relative;
+    z-index: 100;
+    width: calc(100% - 16px);
+    height: 3px;
+    background: #CCCCCC;
+    margin: 24px 0 0 0;
+  }
+  .works__scrollbar-thumb {
+    display: block !important;
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #5AC8D8;
+    transition: transform 0.05s ease-out;
   }
 
   .works__item {

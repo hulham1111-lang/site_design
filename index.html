@@ -208,6 +208,9 @@
               </p>
             </div>
           </div>
+          <div class="works__scrollbar">
+            <span class="works__scrollbar-thumb"></span>
+          </div>
         </div>
         <div class="works__background" aria-hidden="true">
         <div class="works__watermark">WORKS</div>
@@ -247,6 +250,37 @@
     <p class="footer__address">静岡県</p>
     <p class="footer__copyright"><small>&copy;2025 Shinmee</small></p>
   </footer>
+
+  <script>
+    (function() {
+      const slider = document.querySelector('.works__slider');
+      const thumb = document.querySelector('.works__scrollbar-thumb');
+      if (!slider || !thumb) return;
+
+      function updateThumb() {
+        const scrollWidth = slider.scrollWidth;
+        const clientWidth = slider.clientWidth;
+        const scrollLeft = slider.scrollLeft;
+        const maxScroll = scrollWidth - clientWidth;
+        
+        if (maxScroll <= 0) {
+          thumb.style.width = '100%';
+          thumb.style.transform = 'translateX(0)';
+          return;
+        }
+
+        const thumbWidth = (clientWidth / scrollWidth) * 100;
+        const thumbPosition = (scrollLeft / maxScroll) * (100 - thumbWidth);
+        
+        thumb.style.width = thumbWidth + '%';
+        thumb.style.transform = 'translateX(' + (thumbPosition / thumbWidth * 100) + '%)';
+      }
+
+      slider.addEventListener('scroll', updateThumb);
+      window.addEventListener('resize', updateThumb);
+      updateThumb();
+    })();
+  </script>
 </body>
 
 </html>
