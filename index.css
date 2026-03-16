@@ -1071,9 +1071,9 @@ main {
   .works__background {
     top: 170px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-83.333%);
     width: 92%;
-    height: 320px;
+    height: 213px;
   }
 
   .works__watermark {
