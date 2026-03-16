@@ -1014,6 +1014,8 @@ main {
   }
 
   .works__slider-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 540px;
     margin: 28px auto 0;
@@ -1026,6 +1028,9 @@ main {
   .works__slider {
     scrollbar-width: none;
     -ms-overflow-style: none;
+    padding-bottom: 0;
+    overflow-x: auto;
+    overflow-y: visible;
   }
   .works__slider::-webkit-scrollbar {
     display: none;
