@@ -1014,19 +1014,19 @@ main {
 
   .works__slider {
     scrollbar-width: auto;
-    scrollbar-color: var(--primary-color) var(--background-color);
+    scrollbar-color: auto;
   }
 
   .works__slider::-webkit-scrollbar {
-    height: 4px;
+    height: auto;
   }
 
   .works__slider::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: initial;
   }
 
   .works__slider::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: initial;
   }
 
   .works__item {
