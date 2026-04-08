@@ -559,3 +559,36 @@ main {
   border-radius: 0;
   outline: none;
 }
+
+
+/*=================================
+  Large Display (1440基準キャンバス)
+=================================*/
+@media (min-width: 1600px) {
+  /* 13インチ基準の横幅バランスをそのまま中央配置 */
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .fv {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 760px;
+  }
+
+  .about,
+  .works,
+  .contact {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* FV装飾が下落ちしないように固定 */
+  .fv__background-decoration {
+    top: 360px;
+    bottom: auto;
+  }
+}
