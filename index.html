@@ -43,6 +43,10 @@
 <body>
   <header class="header">
     <div class="header__container container">
+      <input class="header__menu-toggle" type="checkbox" id="menu-toggle">
+      <label class="header__menu-button" for="menu-toggle" aria-label="メニューを開閉">
+        <span class="header__menu-line"></span>
+      </label>
       <nav class="header__nav" aria-label="メインナビゲーション">
         <ul class="header__nav-list">
           <li class="header__nav-item">
@@ -59,6 +63,7 @@
           </li>
         </ul>
       </nav>
+      <label class="header__menu-backdrop" for="menu-toggle" aria-hidden="true"></label>
     </div>
   </header>
 
@@ -232,6 +237,21 @@
     <p class="footer__address">静岡県 静岡市駿河区 大谷2丁目</p>
     <p class="footer__copyright"><small>&copy;2025 Shinmee</small></p>
   </footer>
+
+  <script>
+    (function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuLinks = document.querySelectorAll('.header__nav-link');
+      if (!menuToggle || menuLinks.length === 0) return;
+
+      menuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          menuToggle.checked = false;
+        });
+      });
+    })();
+  </script>
+
 </body>
 
 </html>
