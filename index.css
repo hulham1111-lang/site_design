@@ -725,6 +725,281 @@ main {
 }
 
 /*=================================
+  Mobile (<=768px)
+=================================*/
+@media (max-width: 768px) {
+  :root {
+    --header-height: 76px;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .header {
+    height: var(--header-height);
+    mix-blend-mode: normal;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .header__container {
+    justify-content: center;
+  }
+
+  .header__nav {
+    width: 100%;
+  }
+
+  .header__nav-list {
+    justify-content: space-between;
+  }
+
+  .header__nav-item {
+    padding-left: 0;
+  }
+
+  .header__nav-link {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  .fv {
+    height: auto;
+    padding-top: var(--header-height);
+  }
+
+  .fv__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 20px 56px;
+  }
+
+  .fv__content,
+  .fv__person {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .fv__logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 14px;
+  }
+
+  .fv__description {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .fv__scroll-indicator {
+    margin-top: 22px;
+  }
+
+  .fv__person-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .fv__background-decoration {
+    width: 100%;
+    height: 220px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .about {
+    margin: 84px auto 112px;
+    padding: 0 24px;
+  }
+
+  .about .section-heading--vertical {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 14px;
+    padding-left: 0;
+    transform: none;
+    transform-origin: center;
+  }
+
+  .about .section-heading--vertical::before {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 1px;
+    background-color: var(--primary-color);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .about .section-heading--vertical::after {
+    display: none;
+  }
+
+  .about__container {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .about__content {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .about__title,
+  .about__description {
+    margin-left: 0;
+  }
+
+  .about__title {
+    text-align: center;
+  }
+
+  .about__description {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 34ch;
+  }
+
+  .about__person {
+    width: 100%;
+    max-width: 324px;
+    margin: 0 auto;
+  }
+
+  .about__background-element {
+    top: 24px;
+    left: 24px;
+  }
+
+  .about__english-text {
+    font-size: 72px;
+    bottom: 84px;
+  }
+
+  .works {
+    height: auto;
+    margin-top: 12px;
+    margin-bottom: 88px;
+  }
+
+  .works__heading {
+    margin-left: 0;
+    padding: 0 24px;
+  }
+
+  .works__content {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 24px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .works__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .works__description {
+    max-width: 34ch;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .works__selector-container {
+    width: 100%;
+    margin: 28px auto 0;
+    padding: 24px 0 28px 16px;
+    height: auto;
+  }
+
+  .works__item {
+    width: 260px;
+    margin-right: 20px;
+  }
+
+  .works__item-image {
+    width: 260px;
+    height: 170px;
+    object-fit: cover;
+  }
+
+  .works__background-element {
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    height: 320px;
+  }
+
+  .works__treat {
+    font-size: 96px;
+    bottom: -36px;
+  }
+
+  .contact {
+    margin: 88px auto 84px;
+    padding: 0 24px;
+  }
+
+  .contact__heading {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 14px;
+    padding: 0;
+  }
+
+  .contact__container {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .contact__lead {
+    width: 100%;
+  }
+
+  .contact__title {
+    text-align: center;
+  }
+
+  .contact__content {
+    margin: 0 auto;
+    max-width: 34ch;
+    width: 100%;
+  }
+
+  .contact__description {
+    margin-bottom: 28px;
+  }
+
+  .contact__mail-link {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer {
+    height: auto;
+    padding: 60px 20px 24px;
+  }
+
+  .footer__logo {
+    margin-top: 0;
+  }
+
+  .footer__copyright {
+    margin: 48px 0 0;
+  }
+}
+
+/*=================================
   Large Display (1440基準キャンバス)
 =================================*/
 @media (min-width: 1600px) {
