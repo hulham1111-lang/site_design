@@ -86,7 +86,7 @@
           </div>
         </div>
         <div class="fv__person">
-          <img class="fv__person-image" src="./image/person.png" alt="代表者の写真">
+          <img class="fv__person-image" src="./image/person01.jpg" alt="代表者の写真">
         </div>
         <div class="fv__background-decoration"></div>
       </div>
@@ -111,7 +111,7 @@
         </div>
         <div class="about__person">
           <div class="about__image-wrapper">
-            <img src="./image/person02.png" alt="代表者の写真" class="about__image">
+            <img src="./image/person02.jpg" alt="代表者の写真" class="about__image">
             <div class="about__english-text" aria-hidden="true">ABOUT</div>
           </div>
           <div class="about__background-element"></div>
@@ -261,6 +261,15 @@
       if (!worksSelector || !worksScrollbar || !worksScrollbarThumb) return;
 
       const updateWorksScrollbar = () => {
+        const firstItem = worksSelector.querySelector('.works__item');
+        if (firstItem) {
+          const itemStyle = window.getComputedStyle(firstItem);
+          const itemWidth = firstItem.getBoundingClientRect().width;
+          const itemGap = parseFloat(itemStyle.marginRight) || 0;
+          const endPadding = Math.max(0, (worksSelector.clientWidth - itemWidth) / 2 - itemGap);
+          worksSelector.style.paddingRight = endPadding + 'px';
+        }
+
         const scrollWidth = worksSelector.scrollWidth;
         const clientWidth = worksSelector.clientWidth;
         const maxScroll = scrollWidth - clientWidth;
