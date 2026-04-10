@@ -1018,9 +1018,9 @@ main {
   }
 
   .works__selector-container {
-    width: calc(100% - 24px);
-    max-width: 540px;
-    margin: 28px 0 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 28px 0 0 24px;
     padding: 24px 0 28px 24px;
     height: auto;
   }
