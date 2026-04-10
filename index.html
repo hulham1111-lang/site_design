@@ -201,6 +201,9 @@
             </div>
             </div>
           </div>
+          <div class="works__scrollbar" aria-hidden="true">
+            <span class="works__scrollbar-thumb"></span>
+          </div>
         <div class="works__background-element" aria-hidden="true">
         <div class="works__treat">WORKS</div>
         </div>
@@ -242,13 +245,45 @@
     (function() {
       const menuToggle = document.getElementById('menu-toggle');
       const menuLinks = document.querySelectorAll('.header__nav-link');
-      if (!menuToggle || menuLinks.length === 0) return;
 
-      menuLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-          menuToggle.checked = false;
+      if (menuToggle && menuLinks.length > 0) {
+        menuLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            menuToggle.checked = false;
+          });
         });
-      });
+      }
+
+      const worksSelector = document.querySelector('.works__selector');
+      const worksScrollbar = document.querySelector('.works__scrollbar');
+      const worksScrollbarThumb = document.querySelector('.works__scrollbar-thumb');
+
+      if (!worksSelector || !worksScrollbar || !worksScrollbarThumb) return;
+
+      const updateWorksScrollbar = () => {
+        const scrollWidth = worksSelector.scrollWidth;
+        const clientWidth = worksSelector.clientWidth;
+        const maxScroll = scrollWidth - clientWidth;
+        const trackWidth = worksScrollbar.clientWidth;
+
+        if (maxScroll <= 0 || trackWidth <= 0) {
+          worksScrollbarThumb.style.width = '100%';
+          worksScrollbarThumb.style.transform = 'translateX(0)';
+          return;
+        }
+
+        const thumbWidthPx = Math.max(24, (clientWidth / scrollWidth) * trackWidth);
+        const maxThumbX = trackWidth - thumbWidthPx;
+        const thumbX = (worksSelector.scrollLeft / maxScroll) * maxThumbX;
+
+        worksScrollbarThumb.style.width = thumbWidthPx + 'px';
+        worksScrollbarThumb.style.transform = 'translateX(' + thumbX + 'px)';
+      };
+
+      worksSelector.addEventListener('scroll', updateWorksScrollbar, { passive: true });
+      window.addEventListener('resize', updateWorksScrollbar);
+      window.addEventListener('load', updateWorksScrollbar);
+      updateWorksScrollbar();
     })();
   </script>
 

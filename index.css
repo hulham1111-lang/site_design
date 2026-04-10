@@ -566,6 +566,14 @@ main {
   outline: none;
 }
 
+.works__scrollbar {
+  display: none;
+}
+
+.works__scrollbar-thumb {
+  display: none;
+}
+
 
 
 /*=================================
@@ -1023,6 +1031,35 @@ main {
     margin: 28px 0 0 24px;
     padding: 24px 0 28px 24px;
     height: auto;
+  }
+
+  .works__selector {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .works__selector::-webkit-scrollbar {
+    display: none;
+  }
+
+  .works__scrollbar {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin: 18px 0 0;
+    background: var(--background-color);
+    z-index: 30;
+  }
+
+  .works__scrollbar-thumb {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--primary-color);
+    transition: transform 0.05s ease-out;
   }
 
   .works__item {
